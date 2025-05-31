@@ -12,23 +12,16 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 ## PROGRAM
 ```
 #include <stdio.h>
-
 int main() {
-    int a = 44, b = 3;
-
-    int result = a << b;
-
-    printf("Original value: %d\n", a);
-    printf("Value after left shifting by %d positions: %d\n", b, result);
-
-    return 0;
+    unsigned int a=44 ;	
+      int c = 0; 
+    c = a << 3;    
+   printf("After Left Shift Operation value of a is:%d\n", c );
 }
 ```
-
 ## OUTPUT
 
-![Screenshot 2025-04-27 213102](https://github.com/user-attachments/assets/f3539013-f193-4d96-9083-bd9708692c45)
-
+![image](https://github.com/user-attachments/assets/320fd643-9857-4ec2-952b-53a015169a33)
 
 
 
