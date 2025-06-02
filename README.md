@@ -170,60 +170,74 @@ Thus the program to count the total number of words in a given string using do W
 write a Program to compare two strings without using strcmp().
 ## ALGORITHM
 Step 1: Start the program.
+
 Step 2: Declare two character arrays c1 and c2 of size 100 to store the strings. Also, declare an integer variable
-             flag and initialize it to 0, and i for indexing.      
+             flag and initialize it to 0, and i for indexing. 
+
+             
 Step 3: Read the first string c1 using scanf("%[^\n]", c1); — this reads input until a newline is encountered 
             (i.e., can include spaces).
+
+            
 Step 4: Read the second string c2 using scanf("%s", c2); — this reads input until a space or newline (i.e., no 
             spaces in the second string).
+            
 Step 5: Start comparing characters of both strings from index i = 0.
+
 Step 6: Repeat the following while neither c1[i] nor c2[i] is '\0' (i.e., end of string):
+
 •	If c1[i] is not equal to c2[i], set flag = 1.
+
 •	Increment i by 1.
+
 Step 7: After the loop, check the value of flag:
+
 •	If flag == 0, print "strings are same".
+
 •	Otherwise, print "strings are not same".
+
 Step 8: End the program.
 
 ## PROGRAM
 ```
 #include <stdio.h>
-
-int main() {
-    char c1[100], c2[100];
+int main()
+{
+    char str1[100], str2[100];
     int i = 0, flag = 0;
+    printf("Enter the first string: ");
+    fgets(str1, sizeof(str1), stdin);
 
-
-    printf("Enter first string: ");
-    scanf("%[^\n]", c1);
-
-
-    while (getchar() != '\n'); 
-)
-    printf("Enter second string: ");
-    scanf("%s", c2);
-
-    while (c1[i] != '\0' || c2[i] != '\0') {
-        if (c1[i] != c2[i]) {
+    printf("Enter the second string: ");
+    fgets(str2, sizeof(str2), stdin);
+    while (str1[i] != '\0' && str2[i] != '\0') 
+    {
+        if (str1[i] != str2[i])
+        {
             flag = 1;
             break;
         }
         i++;
     }
+    if (str1[i] != str2[i]) 
+    {
+        flag = 1;
+    }
 
-
-    if (flag == 0)
-        printf("Strings are same.\n");
-    else
-        printf("Strings are not same.\n");
+    if (flag == 0) {
+        printf("Strings are equal.\n");
+    }
+    else {
+        printf("Strings are not equal.\n");
+    }
 
     return 0;
 }
-
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/25ca649d-6c11-443e-a038-55a47f208635)
+![image](https://github.com/user-attachments/assets/f4391d5b-c08b-44c3-9cd9-0244ece1246c)
+
 
 
 
