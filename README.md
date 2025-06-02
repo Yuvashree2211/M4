@@ -13,10 +13,9 @@ To write a C Program to perform the basic left shift operation for 44 integer nu
 ```
 #include <stdio.h>
 int main() {
-    unsigned int a=44 ;	
-      int c = 0; 
-    c = a << 3;    
-   printf("After Left Shift Operation value of a is:%d\n", c );
+     int a=44 ;	
+     a = a << 3;    
+   printf("After Left Shift Operation value of a is:%d\n", a );
 }
 ```
 ## OUTPUT
@@ -59,9 +58,9 @@ Write a C Program to check whether the two numbers are equal or not using simple
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    if(a==b)
+    int X,Y;
+    scanf("%d%d",&X,&Y);
+    if(X==Y)
     {
         printf("X is equal to Y");
     }
@@ -143,10 +142,11 @@ int main()
     char a[100];
     int l=0;
     fgets(a,sizeof(a),stdin);
-    while(a[l]!='\0')
+    do
     {
         l++;
     }
+    while(a[l]!='\0');
     printf("%d",l-1);
     return 0;
 }
@@ -187,29 +187,44 @@ Step 8: End the program.
 
 ## PROGRAM
 ```
-#include<stdio.h>
-#include<string.h>
-int main()
-{
-    char str[10];
-    char srt[10];
-    scanf("%s",str);
-    scanf("%s",srt);
-    int s = strcmp(str,srt);
-    if(s==0)
-    {
-        printf("strings are same");
+#include <stdio.h>
+
+int main() {
+    char c1[100], c2[100];
+    int i = 0, flag = 0;
+
+
+    printf("Enter first string: ");
+    scanf("%[^\n]", c1);
+
+
+    while (getchar() != '\n'); 
+)
+    printf("Enter second string: ");
+    scanf("%s", c2);
+
+    while (c1[i] != '\0' || c2[i] != '\0') {
+        if (c1[i] != c2[i]) {
+            flag = 1;
+            break;
+        }
+        i++;
     }
+
+
+    if (flag == 0)
+        printf("Strings are same.\n");
     else
-    {
-        printf("strings are not same");
-    }
+        printf("Strings are not same.\n");
+
     return 0;
 }
+
 ```
 
 ## OUTPUT
- ![Screenshot 2025-04-27 212610](https://github.com/user-attachments/assets/cebefde7-3e71-4de0-9647-2f6a69f0c375)
+![image](https://github.com/user-attachments/assets/25ca649d-6c11-443e-a038-55a47f208635)
+
 
 
 ## RESULT
